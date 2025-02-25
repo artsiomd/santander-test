@@ -8,10 +8,12 @@ public static class StoryEndpoints
     public static void MapStoryEndpoints(this IEndpointRouteBuilder app)
     {
         var storiesGroup = app.MapGroup("/stories");
-        storiesGroup.MapGet("/", async (int? count, [FromServices] IStoryService service) =>
-        {
-            var stories = await service.GetBestStoriesAsync(count);
-            return TypedResults.Ok(stories);
-        });
+        storiesGroup
+            .MapGet("/", async ([FromQuery] int? count, [FromServices] IStoryService service) =>
+            {
+                var stories = await service.GetBestStoriesAsync(count);
+                return TypedResults.Ok(stories);
+            })
+            .CacheOutput(x => x.SetVaryByQuery("count").Expire(TimeSpan.FromSeconds(30)));
     }
 }

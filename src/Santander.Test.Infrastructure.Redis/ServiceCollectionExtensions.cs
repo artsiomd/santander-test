@@ -17,4 +17,15 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
+
+    public static IServiceCollection AddOutputCache(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddStackExchangeRedisOutputCache(options =>
+        {
+            options.Configuration = configuration.GetConnectionString("RedisConnection");
+            options.InstanceName = "SampleInstance";
+        });
+
+        return services;
+    }
 }
