@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Domain", "sr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Infrastructure.Redis", "src\Santander.Test.Infrastructure.Redis\Santander.Test.Infrastructure.Redis.csproj", "{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Infrastructure.HackerNews", "src\Santander.Test.Infrastructure.HackerNews\Santander.Test.Infrastructure.HackerNews.csproj", "{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +59,6 @@ Global
 		{6CE5D05A-5311-452E-82AF-C15668C4162C} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
 		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
 		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
+		{13CBCDB1-C5F3-4689-BF8B-72250CBA63F2} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
 	EndGlobalSection
 EndGlobal

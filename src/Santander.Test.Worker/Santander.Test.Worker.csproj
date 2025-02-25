@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Santander.Test.Application\Santander.Test.Application.csproj" />
+    <ProjectReference Include="..\Santander.Test.Infrastructure.HackerNews\Santander.Test.Infrastructure.HackerNews.csproj" />
     <ProjectReference Include="..\Santander.Test.Infrastructure.Redis\Santander.Test.Infrastructure.Redis.csproj" />
   </ItemGroup>
 

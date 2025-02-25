@@ -18,7 +18,7 @@ internal class UpdateStoryService(
 
         var storiesToSave = stories
             .Where(x => x != null)
-            .Select(x => x!.Map())
+            .Select(x => x!)
             .OrderByDescending(x => x.Score)
             .ToList();
 

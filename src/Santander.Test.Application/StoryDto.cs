@@ -4,7 +4,7 @@ namespace Santander.Test.Application;
 
 public record StoryDto(
     string Title,
-    Uri Uri,
+    string? Uri,
     string PostedBy,
     DateTimeOffset Time,
     int Score,
@@ -12,11 +12,6 @@ public record StoryDto(
 {
 
     public StoryDto(Story story)
-        :this(story.Title, new Uri(story.Uri), story.PostedBy, story.Time, story.Score, story.CommentCount)
+        : this(story.Title, story.Uri?.AbsoluteUri, story.PostedBy, story.Time, story.Score, story.CommentCount)
     { }
-
-    public Story Map()
-    {
-        return new(Title, Uri.AbsoluteUri, PostedBy, Time, Score, CommentCount);
-    }
 }

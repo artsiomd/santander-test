@@ -1,14 +1,15 @@
 ﻿using Santander.Test.Application.Services.Abstractions;
+using Santander.Test.Domain;
 
 namespace Santander.Test.Application.Services;
 
 internal class FakeExternalStoryProvider : IExternalStoryProvider
 {
-    private readonly Dictionary<long, StoryDto> _storage = new()
+    private readonly Dictionary<long, Story> _storage = new()
     {
         {
             1,
-            new StoryDto("Valve releases Team Fortress 2 code",
+            new Story("Valve releases Team Fortress 2 code",
                 new Uri("https://github.com/ValveSoftware/source-sdk-2013/commit/0759e2e8e179d5352d81d0d4aaded72c1704b7a9"),
                 "davikr",
                 DateTimeOffset.FromUnixTimeSeconds(1739908637),
@@ -17,7 +18,7 @@ internal class FakeExternalStoryProvider : IExternalStoryProvider
         },
         {
             2,
-            new StoryDto("Valve releases Team Fortress 1 code",
+            new Story("Valve releases Team Fortress 1 code",
                 new Uri("https://github.com/ValveSoftware/source-sdk-2013/commit/0759e2e8e179d5352d81d0d4aaded72c1704b7a9"),
                 "davikr",
                 DateTimeOffset.FromUnixTimeSeconds(1739908637),
@@ -26,7 +27,7 @@ internal class FakeExternalStoryProvider : IExternalStoryProvider
         },
         {
             3,
-            new StoryDto (
+            new Story(
                 "Valve releases Team Fortress 3 code",
                 new Uri("https://github.com/ValveSoftware/source-sdk-2013/commit/0759e2e8e179d5352d81d0d4aaded72c1704b7a9"),
                 "davikr",
@@ -40,7 +41,7 @@ internal class FakeExternalStoryProvider : IExternalStoryProvider
         return Task.FromResult(new List<long> { 1, 2, 3 });
     }
 
-    public Task<StoryDto?> GetStoryAsync(long id)
+    public Task<Story?> GetStoryAsync(long id)
     {
         _storage.TryGetValue(id, out var result);
         return Task.FromResult(result);

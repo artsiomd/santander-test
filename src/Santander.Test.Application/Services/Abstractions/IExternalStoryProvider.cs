@@ -1,8 +1,10 @@
-﻿namespace Santander.Test.Application.Services.Abstractions;
+﻿using Santander.Test.Domain;
+
+namespace Santander.Test.Application.Services.Abstractions;
 
 public interface IExternalStoryProvider
 {
     Task<List<long>> GetBestStoryIdsAsync();
 
-    Task<StoryDto?> GetStoryAsync(long id);
+    Task<Story?> GetStoryAsync(long id);
 }

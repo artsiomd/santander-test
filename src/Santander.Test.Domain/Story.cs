@@ -1,33 +1,23 @@
 ﻿namespace Santander.Test.Domain
 {
-    public class Story
+    public class Story(
+        string title,
+        Uri? uri,
+        string postedBy,
+        DateTimeOffset time,
+        int score,
+        int commentCount)
     {
-        public Story(
-            string title,
-            string uri,
-            string postedBy,
-            DateTimeOffset time,
-            int score,
-            int commentCount)
-        {
-            Title = title;
-            Uri = uri;
-            PostedBy = postedBy;
-            Time = time;
-            Score = score;
-            CommentCount = commentCount;
-        }
+        public string Title { get; private set; } = title;
 
-        public string Title { get; private set; }
+        public Uri? Uri { get; private set; } = uri;
 
-        public string Uri { get; private set; }
+        public string PostedBy { get; private set; } = postedBy;
 
-        public string PostedBy { get; private set; }
+        public DateTimeOffset Time { get; private set; } = time;
 
-        public DateTimeOffset Time { get; private set; }
+        public int Score { get; private set; } = score;
 
-        public int Score { get; private set; }
-
-        public int CommentCount { get; private set; }
+        public int CommentCount { get; private set; } = commentCount;
     }
 }
