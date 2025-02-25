@@ -7,12 +7,51 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{683969CA-52A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{31598D1A-6120-4E36-9E80-21B91BBCEE94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.RestAPI", "src\Santander.Test.RestAPI\Santander.Test.RestAPI.csproj", "{86E17238-6F20-48AF-9FCF-64615F097733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Worker", "src\Santander.Test.Worker\Santander.Test.Worker.csproj", "{8EC30A92-8D1F-487D-B1F4-AF1B6342E418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Application", "src\Santander.Test.Application\Santander.Test.Application.csproj", "{6CE5D05A-5311-452E-82AF-C15668C4162C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Domain", "src\Santander.Test.Domain\Santander.Test.Domain.csproj", "{CA9D92F6-D6F2-496E-9516-3C24622ADDA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Santander.Test.Infrastructure.Redis", "src\Santander.Test.Infrastructure.Redis\Santander.Test.Infrastructure.Redis.csproj", "{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E17238-6F20-48AF-9FCF-64615F097733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E17238-6F20-48AF-9FCF-64615F097733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E17238-6F20-48AF-9FCF-64615F097733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E17238-6F20-48AF-9FCF-64615F097733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC30A92-8D1F-487D-B1F4-AF1B6342E418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC30A92-8D1F-487D-B1F4-AF1B6342E418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC30A92-8D1F-487D-B1F4-AF1B6342E418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC30A92-8D1F-487D-B1F4-AF1B6342E418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE5D05A-5311-452E-82AF-C15668C4162C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE5D05A-5311-452E-82AF-C15668C4162C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE5D05A-5311-452E-82AF-C15668C4162C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE5D05A-5311-452E-82AF-C15668C4162C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86E17238-6F20-48AF-9FCF-64615F097733} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
+		{8EC30A92-8D1F-487D-B1F4-AF1B6342E418} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
+		{6CE5D05A-5311-452E-82AF-C15668C4162C} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
+		{CA9D92F6-D6F2-496E-9516-3C24622ADDA0} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
+		{2032830E-C025-4EF7-8FD7-72EE54A6AC3D} = {683969CA-52A3-4F6D-AA94-B03AC5F6D207}
 	EndGlobalSection
 EndGlobal
