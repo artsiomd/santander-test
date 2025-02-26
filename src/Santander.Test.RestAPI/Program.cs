@@ -14,8 +14,13 @@ builder.Services
 var app = builder.Build();
 
 app.MapOpenApi();
-app.MapScalarApiReference();
+if (app.Environment.IsDevelopment())
+{
+    app.MapScalarApiReference();
+}
+
 app.UseOutputCache();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.MapStoryEndpoints();
 
 app.Run();
