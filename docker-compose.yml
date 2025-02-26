@@ -1,0 +1,48 @@
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    networks:
+      - app-network
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks:
+      - app-network
+  story-api:
+    build:
+      context: .
+      dockerfile: ./src/Santander.Test.RestAPI/Dockerfile
+    container_name: story-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Test
+      - ConnectionStrings__RedisConnection=redis:6379
+    depends_on:
+      - redis
+    networks:
+      - app-network
+  story-worker:
+    build:
+      context: .
+      dockerfile: ./src/Santander.Test.Worker/Dockerfile
+      no_cache: true
+    container_name: story-worker
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Test
+      - ConnectionStrings__RedisConnection=redis:6379
+    depends_on:
+      - redis
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
